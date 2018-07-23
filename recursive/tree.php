@@ -34,7 +34,7 @@ class Tree{
         	if( $v[$this->config['pid']] == $id ){
         		$lev = $level;
         		$v['level'] = $lev;
-        		$v[$arr[$this->config['child']]] = $this->get_list($this->arr,$v[$this->config['id']] , ++$lev);
+        		$v[$this->config['child']] = $this->get_list($v[$this->config['id']] , ++$lev);
         		$array[] = $v;
         	}
         }
